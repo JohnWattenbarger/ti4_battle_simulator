@@ -50,7 +50,7 @@ const UnitSelectionSection: React.FC<UnitSelectionSectionProps> = ({ title, unit
                 <Label>{title}</Label>
             </div>
             <UnitSelectionSummary units={units} style={{ position: 'absolute', top: 0, right: 0 }} />
-            <Stack horizontal tokens={{ childrenGap: 20 }}>
+            <Stack horizontal wrap tokens={{ childrenGap: 20 }}>
                 {unitStats.map((unit) => (
                     <Stack horizontal key={unit.type} verticalAlign='center' horizontalAlign="center" tokens={{ childrenGap: 6 }}>
                         <Image src={imageMappings[unit.type]} alt={unit.type} width={50} height={50} />
