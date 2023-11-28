@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+// src/App.tsx
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { initializeIcons } from '@uifabric/icons';
+import HomePage from './pages/HomePage';
+import BattleSimulationPage from './pages/BattleSimulationPage';
+import ResultsPage from './pages/ResultsPage';
 import './App.css';
 
-function App() {
+initializeIcons();
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/battle-simulation" element={<BattleSimulationPage />} />
+          <Route path="/results" element={<ResultsPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
