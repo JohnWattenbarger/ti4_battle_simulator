@@ -51,8 +51,8 @@
   top: 0px;
   right: 0px;
   color: white;
-  background: rgb(168 168 168 / 60%);
-  margin: 0;
+  /* background: rgb(168 168 168 / 60%); */
+  margin: 0 !important;
 }
 
 .section-title {
