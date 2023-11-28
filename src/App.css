@@ -20,6 +20,7 @@
 }
 
 .results-page {
+  background: rgb(200, 200, 200);
   text-align: center;
 }
 
@@ -29,6 +30,8 @@
 
 .win-percent {
   /* Add styling for the win percentage */
+  margin-top: 20;
+  font-weight: 600;
 }
 
 .unit-selection-section {
