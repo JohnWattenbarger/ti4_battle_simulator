@@ -27,7 +27,7 @@ const BattleSimulationPage: React.FC = () => {
             <Link to="/">
                 <IconButton iconProps={{ iconName: 'Back' }} title="Back" />
             </Link>
-            <Stack horizontal>
+            <Stack>
                 <UnitSelectionSection
                     title="Attacking"
                     units={attackingUnits}
@@ -41,34 +41,6 @@ const BattleSimulationPage: React.FC = () => {
                     unitStats={unitStats}
                 />
             </Stack>
-            <div className="summary-section">
-                <Stack>
-                    <Label>Attacking Summary</Label>
-                    <Label>Cost: {attackingSummary.cost}</Label>
-                    <Label>
-                        Capacity: {attackingSummary.totalCapacity} /{' '}
-                        {attackingUnits.some((unit) => unit.unit.capacity < unit.quantity) ? (
-                            <span style={{ color: 'red' }}>{attackingSummary.totalCapacity}</span>
-                        ) : (
-                            attackingSummary.totalCapacity
-                        )}
-                    </Label>
-                    <Label>Fleet Pool: {attackingSummary.fleetPool}</Label>
-                </Stack>
-                <Stack>
-                    <Label>Defending Summary</Label>
-                    <Label>Cost: {defendingSummary.cost}</Label>
-                    <Label>
-                        Capacity: {defendingSummary.totalCapacity} /{' '}
-                        {defendingUnits.some((unit) => unit.unit.capacity < unit.quantity) ? (
-                            <span style={{ color: 'red' }}>{defendingSummary.totalCapacity}</span>
-                        ) : (
-                            defendingSummary.totalCapacity
-                        )}
-                    </Label>
-                    <Label>Fleet Pool: {defendingSummary.fleetPool}</Label>
-                </Stack>
-            </div>
             <div className="action-buttons">
                 <PrimaryButton onClick={() => console.log('Battle!')} styles={buttonStyles}>
                     Battle

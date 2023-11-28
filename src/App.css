@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background: rgb(50, 50, 50);
 }
 
 .page {
@@ -43,6 +44,15 @@
 
 .unit-selection-section.defending {
   background-color: #e8e8ff;
+}
+
+.unit-selection-summary {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: white;
+  background: rgb(168 168 168 / 60%);
+  margin: 0;
 }
 
 .section-title {
