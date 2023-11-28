@@ -9,17 +9,6 @@ const BattleSimulationPage: React.FC = () => {
     const [attackingUnits, setAttackingUnits] = useState<{ unit: Unit; quantity: number }[]>([]);
     const [defendingUnits, setDefendingUnits] = useState<{ unit: Unit; quantity: number }[]>([]);
 
-    const calculateSummary = (units: { unit: Unit; quantity: number }[]) => {
-        const cost = units.reduce((totalCost, { unit, quantity }) => totalCost + unit.cost * quantity, 0);
-        const totalCapacity = units.reduce((totalCap, { unit, quantity }) => totalCap + unit.capacity * quantity, 0);
-        const fleetPool = units.reduce((totalPool, { unit, quantity }) => totalPool + unit.fleetPool * quantity, 0);
-
-        return { cost, totalCapacity, fleetPool };
-    };
-
-    const attackingSummary = calculateSummary(attackingUnits);
-    const defendingSummary = calculateSummary(defendingUnits);
-
     const buttonStyles = { root: { width: 150, margin: '10px 0' } };
 
     return (
