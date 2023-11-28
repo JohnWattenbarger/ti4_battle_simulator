@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Stack, IconButton, PrimaryButton, Spinner, SpinnerSize } from '@fluentui/react';
 import unitStats, { Unit } from '../unitStats';
 import UnitSelectionSection from '../components/UnitSelectionSection';
-import { calculateWinPercentage, simulateBattle } from '../battleSimulator';
+import { calculateWinPercentage } from '../battleSimulator';
 
 const BattleSimulationPage: React.FC = () => {
     const [attackingUnits, setAttackingUnits] = useState<{ unit: Unit; quantity: number }[]>([]);

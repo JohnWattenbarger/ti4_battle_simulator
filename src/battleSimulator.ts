@@ -1,5 +1,5 @@
 // src/battleSimulator.ts
-import { Unit, UnitTypes } from './unitStats';
+import { Unit } from './unitStats';
 
 export const simulateBattle = (attacker: { unit: Unit; quantity: number }[], defender: { unit: Unit; quantity: number }[]): number => {
     // Function to determine the cost of a unit
@@ -40,8 +40,8 @@ export const simulateBattle = (attacker: { unit: Unit; quantity: number }[], def
 
         // Apply hits to defending units with sustain damage
         for (const unit of defender) {
-            if (unit.unit.remainingSustainDamage ?? 0 > 0) {
-                const sustainedDamage = Math.min(defenseHits, unit.unit.remainingSustainDamage ?? 0);
+            if ((unit.unit.remainingSustainDamage ?? 0) > 0) {
+                const sustainedDamage = Math.min(defenseHits, (unit.unit.remainingSustainDamage ?? 0));
                 unit.unit.remainingSustainDamage = (unit.unit.remainingSustainDamage ?? 0) - sustainedDamage;
                 defenseHits -= sustainedDamage;
                 console.log(`  - ${unit.unit.type} sustained ${sustainedDamage} damage`);

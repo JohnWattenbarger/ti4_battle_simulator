@@ -1,6 +1,6 @@
 // src/App.tsx
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { initializeIcons } from '@uifabric/icons';
 import HomePage from './pages/HomePage';
 import BattleSimulationPage from './pages/BattleSimulationPage';

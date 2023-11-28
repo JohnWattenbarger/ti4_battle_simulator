@@ -1,7 +1,7 @@
 // src/components/UnitSelectionSection.tsx
 import React from 'react';
 import { Stack, Label, Dropdown, Image } from '@fluentui/react';
-import { Unit, UnitTypes } from '../unitStats';
+import { Unit } from '../unitStats';
 import UnitSelectionSummary from './UnitSelectionSummary';
 
 import FighterImage from '../images/Fighter.png';
